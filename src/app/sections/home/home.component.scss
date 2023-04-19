@@ -1,0 +1,441 @@
+// HEADER
+// welcome + shop now
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(
+        rgba(4,9,30,0.7),
+        rgba(4,9,30,0.7)),
+        url(../../../assets/images/backgrounds/bg1.jpg);
+    // background-color: rgba(0,32,96,0.1);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 1% 3%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 12px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: white;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.text-box{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 50px;
+}
+
+.text-box p{
+    margin: 10px 0 30px;
+    font-size: 18px;
+}
+
+.shop-now-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 20px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.shop-now-btn:hover{
+    border: 1px solid white;
+    background: white;
+    transition: 1s;
+    color: #002060;
+    font-weight: 500;
+}
+
+nav .fa-solid.fa-xmark{
+    display: none;
+}
+
+nav .fa-solid.fa-bars{
+    display: none;
+}
+
+
+@media(max-width: 700px){
+    .logo{
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    .nav-links ul li{
+        display: block;
+    }
+
+    .nav-links{
+        position: absolute;
+        background: white;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    .nav-links ul li a{
+        color: #002060;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .nav-links ul{
+        padding: 30px;
+        text-align: center;
+    }
+
+    .text-box h1{
+        font-size: 20px;
+    }
+
+    .text-box p{
+        font-size: 15px;
+    }
+
+    nav .fa-solid.fa-xmark{
+        display: block;
+        color: #002060;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    nav .fa-solid.fa-bars{
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+}
+
+// HOME
+// bestsellers 
+.bestsellers{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.bestseller-col{
+    flex-basis: 32%;
+    margin-bottom: 50px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bestsellers h1{
+    font-size: 45px;
+    color: #002060;
+}
+
+.bestsellers p{
+    font-size: 20px;
+    padding-top: 10px;
+    color: #002060;
+}
+
+.bestseller-col img{
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+}
+
+.products{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.products:hover{
+    background:rgba(0, 29, 71, 0.705);
+    cursor: pointer;
+}
+
+.products h3{
+    width: 100%;
+    font-weight: 500;
+    color: white;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.products:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+// reviews
+.reviews{
+    width: 80%;
+    text-align: center;
+    padding-top: 50px;
+    min-height: 95vh;
+    width: 100%;
+    background-image: linear-gradient(
+        rgba(4,9,30,0.7),
+        rgba(4,9,30,0.7)),
+        url(../../../assets/images/backgrounds/bg2.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.reviews h1{
+    font-size: 45px;
+    color: white;
+}
+
+.reviews p{
+    font-size: 20px;
+    padding-top: 10px;
+    color: white;
+}
+
+.reviews-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+    background: rgba(255,255,255,0.5);
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    text-align: justify;
+}
+
+.reviews-col img{
+    height: 150px;
+    margin: 20px;
+    margin-top: 30px;
+    margin-left: 5px;
+    border-radius: 50%;
+}
+
+.reviews-col h3{
+    font-size: 30px;
+    color: #002060;
+}
+
+.reviews-col p{
+    font-size: 18px;
+    font-weight: 500;
+    color: #002060;
+}
+
+.reviews-col .fa-solid{
+    color: #002060;
+    font-size: large;
+    padding-right: 3px;
+    padding-top: 3px;
+}
+
+.reviews-col .fa-regular{
+    color: #002060;
+    font-size: large;
+    padding-right: 3px;
+    padding-top: 3px;
+}
+
+// contact-us
+.contact-us{
+    margin: 100px auto;
+    margin-bottom: 5px;
+    width: 80%;
+    background-image: linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)),
+        url(../../../assets/images/backgrounds/bg3.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    text-align: center;
+    padding: 90px 0;
+}
+
+.contact-us h1{
+    font-size: 35px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.contact-us-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 20px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.contact-us-btn:hover{
+    border: 1px solid white;
+    background: white;
+    transition: 1s;
+    color: #002060;
+    font-weight: 500;
+}
+
+// about-us
+.about-us{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.about-us h2{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.about-us p{
+    font-size: 15px;
+}
+
+.about-us .icons{
+    color: #002060;
+    cursor: pointer;
+    font-size: x-large;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.about-us .fa-brands{
+    padding-left: 2px;
+    padding-right: 3px;
+}
+
+// bootstrap
+@media(max-width: 700px){
+    .bestseller-col{
+        margin-bottom: 50px;
+    }
+
+    .bestsellers h1{
+        font-size: 30px;
+        color: #002060;
+    }
+    
+    .bestsellers p{
+        font-size: 15px;
+        padding-top: 10px;
+        color: #002060;
+    }
+
+    .reviews h1{
+        font-size: 30px;
+        color: white;
+    }
+    
+    .reviews p{
+        font-size: 15px;
+        padding-top: 10px;
+        color: white;
+    }
+
+    .reviews-col{
+        border-radius: 10px;
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-top: 20px;
+        background: rgba(255,255,255,0.5);
+        padding: 20px;
+        cursor: pointer;
+        display: block;
+        text-align: center;
+    }
+
+    .reviews-col h3{
+        font-size: 25px;
+        color: #002060;
+    }
+    
+    .reviews-col p{
+        font-size: 15px; 
+        font-weight: 500;
+        color: #002060;
+    }
+
+    .contact-us h1{
+        font-size: 25px;
+        padding: 20px;
+    }
+
+    .about-us p{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

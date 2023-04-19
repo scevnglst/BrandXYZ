@@ -2,5 +2,16 @@
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    box-sizing: border-box;
+}
+
+.row{
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
 }

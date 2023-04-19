@@ -1,0 +1,36 @@
+<section class="header">
+    <nav>
+        <a href="" class="logo">BRAND XYZ</a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa-solid fa-xmark" onclick="hideMenu()"></i> 
+            <ul>
+                <li><a routerLink="/">HOME</a></li>
+                <li><a routerLink="/about">ABOUT</a></li>
+                <li><a href="">PRODUCTS</a></li>
+                <li><a href="">CART</a></li>
+                <li><a href="">LOGIN</a></li>
+            </ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <div class="text-box">
+        <h1>Lorem Ipsum Dolor Sit Amet!</h1>
+        <p>Lorem ipsum dolor sit amet. Non necessitatibus illum in porro perferendis non nihil suscipit sed <br> 
+            similique voluptatum. Ea beatae odit sed ducimus velit ut unde error praesentium at sint explicabo.</p>
+        <a href="" class="shop-now-btn">SHOP NOW</a>
+    </div>
+</section>
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+
